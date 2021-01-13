@@ -1,0 +1,47 @@
+.buttons-container h2 {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #e63946;
+    text-decoration: none;
+    width: 160px;
+    height: 42px;
+    margin: 24px 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.btn.test-completed::after,
+.btn.test-completed::before {
+    content: "Test";
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 2.5;
+
+    transition: all 400ms;
+    top: 0;
+}
+
+.btn.btn.test-completed:hover::after {
+    top: -36px;
+}
+
+.btn.test-completed::before {
+    content: "Completed";
+    top: 36px;
+}
+
+.btn.btn.test-completed:hover::before {
+    top: 0;
+}
